@@ -5,6 +5,11 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
+      path: '/',
+      name: 'Home',
+      redirect: '/basic-map'
+    },
+    {
       path: '/basic-map',
       name: 'BasicMap',
       component: () => import('../views/BasicMap.vue')
