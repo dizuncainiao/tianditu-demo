@@ -2,7 +2,7 @@
 import { RouterView } from 'vue-router'
 import { BcLayout } from 'bdsaas-bc'
 
-const options = ref<any>({
+const options = ref<unknown>({
   menuData: [
     {
       groupName: '基础功能',
@@ -34,7 +34,7 @@ const options = ref<any>({
 </script>
 
 <template>
-  <BcLayout :options="options">
+  <BcLayout :options="<any>options">
     <RouterView />
   </BcLayout>
 </template>
