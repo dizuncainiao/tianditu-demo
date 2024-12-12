@@ -1,22 +1,23 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 import NProgress from 'nprogress'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/',
-      name: 'home',
-      component: HomeView
+      path: '/basic-map',
+      name: 'BasicMap',
+      component: () => import('../views/BasicMap.vue')
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
+      path: '/add-coverings',
+      name: 'AddCoverings',
+      component: () => import('../views/AddCoverings.vue')
+    },
+    {
+      path: '/circle-tool',
+      name: 'CircleTool',
+      component: () => import('../views/CircleTool.vue')
     }
   ]
 })
