@@ -6,9 +6,7 @@ const circleTool = ref()
 
 function onLoad() {
   //初始化地图对象
-  map.value = new T.Map('map-3', {
-    projection: 'EPSG:4326' // 默认为百度墨卡托坐标
-  })
+  map.value = new T.Map('map-3')
   //设置显示地图的中心点和级别
   map.value.centerAndZoom(new T.LngLat(117.33001, 31.81325), 18)
   //允许鼠标滚轮放大地图
